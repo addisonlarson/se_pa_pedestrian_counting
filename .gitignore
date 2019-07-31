@@ -301,6 +301,7 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
+/lit_review
 /writings/TRR-S-19-02695.pdf
 /writings/TRB.docx
 *.pptx
