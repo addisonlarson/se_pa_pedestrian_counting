@@ -1,0 +1,20 @@
+
+Estimated vs. Observed Pedestrian Density by Tract
+===================================================================
+                                  Observed Pedestrian Density      
+-------------------------------------------------------------------
+Estimated Pedestrian Density                0.246***               
+                                            (0.006)                
+                                                                   
+Constant                                  2,893.239***             
+                                           (159.738)               
+                                                                   
+N                                             861                  
+R2                                           0.636                 
+Adjusted R2                                  0.636                 
+Residual Std. Error                   4,372.898 (df = 859)         
+F Statistic                        1,503.894*** (df = 1; 859)      
+===================================================================
+Notes:                       ***Significant at the 1 percent level.
+                              **Significant at the 5 percent level.
+                              *Significant at the 10 percent level.

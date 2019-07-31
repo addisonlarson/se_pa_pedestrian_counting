@@ -1,0 +1,26 @@
+
+Estimated Pedestrian Density by Tract
+=========================================================================
+                                ln(Estimated Pedestrian Density by Tract)
+-------------------------------------------------------------------------
+ln(Population density)                          0.832***                 
+                                                 (0.036)                 
+                                                                         
+ln(Percentage college students)                 0.273***                 
+                                                 (0.029)                 
+                                                                         
+Road density                                    0.035***                 
+                                                 (0.005)                 
+                                                                         
+Constant                                        5.048***                 
+                                                 (0.072)                 
+                                                                         
+N                                                  607                   
+R2                                                0.868                  
+Adjusted R2                                       0.868                  
+Residual Std. Error                         0.427 (df = 603)             
+F Statistic                            1,327.084*** (df = 3; 603)        
+=========================================================================
+Notes:                             ***Significant at the 1 percent level.
+                                    **Significant at the 5 percent level.
+                                    *Significant at the 10 percent level.

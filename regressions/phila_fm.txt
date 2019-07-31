@@ -1,0 +1,26 @@
+
+Estimated Pedestrian Density by Tract
+=========================================================================
+                                ln(Estimated Pedestrian Density by Tract)
+-------------------------------------------------------------------------
+ln(Percentage college students)                 0.422***                 
+                                                 (0.061)                 
+                                                                         
+Percentage residents below FPL                   -0.003                  
+                                                 (0.004)                 
+                                                                         
+ln(Transit activity density)                    0.559***                 
+                                                 (0.042)                 
+                                                                         
+Constant                                        3.268***                 
+                                                 (0.361)                 
+                                                                         
+N                                                  372                   
+R2                                                0.428                  
+Adjusted R2                                       0.423                  
+Residual Std. Error                         0.962 (df = 368)             
+F Statistic                              91.631*** (df = 3; 368)         
+=========================================================================
+Notes:                             ***Significant at the 1 percent level.
+                                    **Significant at the 5 percent level.
+                                    *Significant at the 10 percent level.
