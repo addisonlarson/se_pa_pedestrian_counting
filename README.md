@@ -1,2 +1,2 @@
 # se_pa_pedestrian_counting
- Stratified sampling for the Southeastern PA Pedestrian Counting Program.
+This repository contains the code required to select count locations for the Delaware Valley Regional Planning Commission (DVRPC)'s on-street pedestrian counting program in Bucks, Chester, Delaware, Montgomery, and Philadelphia Counties in Southeastern Pennsylvania. A stratified sampling scheme is used to select a representative set of 170 locations for seven-day infrared pedestrian counts, control for activity around schools and along road segments with transit service, and improve statistical rigor while maintaining a relatively small sample size.
