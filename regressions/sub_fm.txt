@@ -3,23 +3,23 @@ Estimated Pedestrian Density by Tract
 =========================================================================
                                 ln(Estimated Pedestrian Density by Tract)
 -------------------------------------------------------------------------
-ln(Population density)                          0.832***                 
-                                                 (0.036)                 
+ln(Population density)                          0.846***                 
+                                                 (0.037)                 
                                                                          
-ln(Percentage college students)                 0.273***                 
-                                                 (0.029)                 
+ln(Percentage college students)                 0.314***                 
+                                                 (0.030)                 
                                                                          
-Road density                                    0.035***                 
+Road density                                    0.031***                 
                                                  (0.005)                 
                                                                          
-Constant                                        5.048***                 
-                                                 (0.072)                 
+Constant                                        5.020***                 
+                                                 (0.074)                 
                                                                          
 N                                                  607                   
-R2                                                0.868                  
-Adjusted R2                                       0.868                  
-Residual Std. Error                         0.427 (df = 603)             
-F Statistic                            1,327.084*** (df = 3; 603)        
+R2                                                0.864                  
+Adjusted R2                                       0.864                  
+Residual Std. Error                         0.435 (df = 603)             
+F Statistic                            1,281.406*** (df = 3; 603)        
 =========================================================================
 Notes:                             ***Significant at the 1 percent level.
                                     **Significant at the 5 percent level.

@@ -438,10 +438,10 @@ Stepwise regressions identify the strongest correlates of pedestrian activity se
 The percentage of college students and transit activity density are most highly correlated with expected pedestrian densities in the City of Philadelphia. These are the two variables used to create census tract sampling strata in Philadelphia. No other variable was found to be statistically significant. See Table~\ref{phila-reg} for regression results.
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Wed, Feb 27, 2019 - 3:15:32 PM
+% Date and time: Mon, Aug 05, 2019 - 8:40:39 AM
 \begin{table}[!htbp] \centering 
 	\caption{Estimated Pedestrian Density by Tract, Philadelphia} 
-	\label{phila-reg} 
+	\label{} 
 	\begin{tabular}{@{\extracolsep{5pt}}lc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
@@ -449,6 +449,9 @@ The percentage of college students and transit activity density are most highly 
 		\hline \\[-1.8ex] 
 		ln(Percentage college students) & 0.412$^{***}$ \\ 
 		& (0.061) \\ 
+		& \\ 
+		Percentage residents below FPL & $-$0.002 \\ 
+		& (0.004) \\ 
 		& \\ 
 		ln(Transit activity density) & 0.562$^{***}$ \\ 
 		& (0.042) \\ 
@@ -475,9 +478,11 @@ The population density, percentage of college students, and road density are mos
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Wed, Feb 27, 2019 - 3:15:29 PM
 \FloatBarrier
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Aug 05, 2019 - 8:39:58 AM
 \begin{table}[!htbp] \centering 
 	\caption{Estimated Pedestrian Density by Tract, Four Suburban Counties} 
-	\label{suburb-reg} 
+	\label{} 
 	\begin{tabular}{@{\extracolsep{5pt}}lc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
@@ -506,7 +511,7 @@ The population density, percentage of college students, and road density are mos
 		& \multicolumn{1}{r}{$^{**}$Significant at the 5 percent level.} \\ 
 		& \multicolumn{1}{r}{$^{*}$Significant at the 10 percent level.} \\ 
 	\end{tabular} 
-\end{table}
+\end{table} 
 \FloatBarrier
 
 \subsubsection{Strata creation and distribution}
@@ -751,7 +756,7 @@ While the primary goal of the stratified sampling scheme is to select a set of r
 
 \subsubsection{Count locations}
 
-\textbf{Census tract sampling strata} After selecting census tracts from the census tract sampling stratum, we contacted the urban planning departments of each suburban county with maps of the selected census tracts and guidelines for site selection. Each of these counties responded with a set of physical count locations. For more on this, see Section~\ref{sec:stakeholder-engagement}. \\
+\textbf{Census tract sampling strata} After selecting census tracts from the census tract sampling stratum, we contacted the planning departments of each suburban county with maps of the selected census tracts and guidelines for site selection. Each of these counties responded with a set of physical count locations. For more on this, see Section~\ref{sec:stakeholder-engagement}. \\
 
 Two selected census tracts in Chester County were determined to have no sufficient locations for conducting counts. Census Tract 42045405000 in Chester City was dominated by several schools, which erased much of the tract's land area, and the Chester Transportation Center. The only suitable location in Census Tract 42045407000 in Chester Heights borough was inside a private apartment complex; it would be difficult to obtain permission to conduct a count here, and the count would likely only capture pedestrian patterns within the complex. These observations were replaced with other randomly selected observations in the same sampling strata within Chester County. \\
 
@@ -768,16 +773,10 @@ Two selected census tracts in Chester County were determined to have no sufficie
 \textbf{High- and low-transit arterial strata} 10 counts are selected from the high- and low-transit arterial strata, making 20 arterial strata counts in total. To ensure an even distribution of contexts, the transit and non-transit arterial observations are evenly distributed among the underlying census tract strata, i.e. $\left(1\:count \cdot 8\: strata = 8 \: counts\right)$. The remaining two counts per stratum are placed into the pool. \\
 
 \subsubsection{Rules}
-Here's some rules.
 
-\subsubsection{Exceptions}
-Here are some exceptions. \textbf{Census tract sampling strata} \\
+\textbf{Census tract sampling strata} 10 counts are allocated to each of 4 sampling strata, meaning 40 counts distributed among the city. \\
 
-\textbf{High- and low-transit arterial strata} Two high-transit and two low-transit counts remain. Low-transit strata are more common in census tract sampling strata LL and HL, so an additional count is allocated to census tract strata LL and HL, respectively. High-transit strata are more common in census tract sampling strata LH and HH, so an additional count is allocated to census tract strata LH and HH, respectively. \\
-
-\subsubsection{Count locations}
-
-TBD
+\textbf{High- and low-ridership transit streets strata} 10 counts are selected from high- and low-ridership -transit streets strata, making 20 streets strata counts in total. To ensure an even distribution of contexts, the high- and low-ridership observations are evenly distributed among the underlying census tract strata, i.e. $\left(1\:count \cdot 8\: strata = 8 \: counts\right)$. \\
 
 \section{Correspondence with member governments}
 \label{sec:stakeholder-engagement}
@@ -828,11 +827,18 @@ Because the study area for the cyclical pedestrian counting program spans five c
 \section{In hindsight}
 \label{sec:improvements}
 
-\begin{enumerate}
-	\item It is possible to set a maximum distance for IDW interpolation. For example, if a maximum distance of 0.5 miles had been selected, then pedestrian counts farther than 0.5 miles from a given grid cell would not affect the grid cell's interpolated count, and grid cells farther than 0.5 miles from any existing pedestrian count would not be assigned a value. Though this method would have greatly decreased the number of census tract observations to compare observed and estimated pedestrian densities, it probably would have yielded better results.
-	\item Instead of using IDW interpolation and estimating pedestrian counts and densities, a more direct approach would have been to fit a spatial autoregressive model to existing counts. The results of this model could then inform a stratified sampling scheme. DVRPC is using this approach in an analysis of its cyclical bicycle counting program, as there are many more existing bicycle counts compared to pedestrian counts.
-	\item Although the approach would require significant modification to the study design, a scheme to select directly for road segments instead of census tracts would simplify the site selection process.
-\end{enumerate}
+The goal of the site selection process of DVRPC's SE Pennsylvania Cyclical Pedestrian Counting Program is to maximize the representativeness of on-street pedestrian count locations while minimizing bias. Our site selection process has accomplished this goal through stepwise regression and SRS, and counts are currently being conducted in the four suburban counties of the study area at the time of writing. We also minimize bias and maximize reproducibility by automating all steps of the site selection process in \texttt{R} except the verification of count locations. \\
+
+In the future, we will be able to assess the representativeness of our site selection process using the counts collected from this program. For example, the sampling strata could be evaluated through a cluster analysis of all counts. If the sampling strata and the resulting clusters are similar, this may indicate that the sampling strata represent different pedestrian activity patterns. These results might then be used to extrapolate on-street pedestrian patterns to other locations where counts have not yet been conducted. \\
+
+That said, there are opportunities for improvement in the design of this site selection process. While stratified random sampling of census tracts is good in that it allows member governments to become involved in the site selection process and the pedestrian count program more generally, it also increases the chances of biased site selection, as many census tracts have several eligible areas to conduct a pedestrian count. SRS of eligible road segments would reduce the potential for bias in site selection and enable us to consider road functional classification aside from major and minor arterials. \\
+
+Our IDW interpolation method did not include any distance constraint. This means that the value assigned to a given grid cell of the 100,000 grid cells in the study area depended on the values of all on-street pedestrian counts in the region. It would be preferable to add a distance constraint so that the values of grid cells not within a reasonable distance of an existing count are not predicted. While this would reduce the number of census tracts to compare observed and estimated pedestrian densities, the results would likely be more realistic. \\
+
+IDW interpolation is used in this study because it is easy to implement, and it would likely be difficult to fit a semivariogram to existing pedestrian counts given the paucity of available data. However, if a study area already has several existing counts, then kriging can be used to fit a model directly to existing counts. In their tests of ordinary and universal kriging versus IDW interpolation, Zimmerman et al. find that kriging performs better than IDW interpolation on irregular surfaces and when sample points are less uniformly distributed---both of which are expected attributes of non-motorized count data. A regression-kriging approach would combine regression with ordinary kriging and potentially enable the creation of sampling strata without needing to estimate pedestrians at the census tract level. \\
+
+IDW interpolation and kriging incorporate the distance between observations in calculation; we use straight-line distances in this paper. It would be preferable to incorporate network distance into future approaches.
+
 
 \bibliographystyle{apacite}
 \bibliography{biblio}
